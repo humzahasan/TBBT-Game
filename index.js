@@ -1,11 +1,26 @@
+//Selector
+const element = document.querySelectorAll('.hand');
+const btn = document.querySelectorAll('button');
+const headGreet = document.getElementById('game__head');
+let myscore = parseInt(document.getElementById('myscore').innerText);
+let compscore = parseInt(document.getElementById('compscore').innerText);
+
+//Function
+
 function play(select) {
+  element.forEach((el) => el.classList.add('hand-animate'));
+  setTimeout(() => {
+    gameStart(select);
+  }, 1000);
+}
+
+function gameStart(select) {
   var options = ['lizard', 'paper', 'rock', 'scissors', 'spock'];
   var comphand = Math.floor(Math.random() * 5);
-  var myscore = parseInt(document.getElementById('myscore').innerText);
-  var compscore = parseInt(document.getElementById('compscore').innerText);
-
   document.getElementById('comphand').src = `../img/${options[comphand]}.png`;
   document.getElementById('myhand').src = `../img/${select}.png`;
+  element.forEach((el) => el.classList.remove('hand-animate'));
+
   switch (select) {
     case 'scissors':
       if (options[comphand] == 'paper' || options[comphand] == 'lizard')
@@ -52,4 +67,16 @@ function play(select) {
 
   document.getElementById('compscore').innerText = compscore;
   document.getElementById('myscore').innerText = myscore;
+
+  if (myscore == '5' || compscore == '5') {
+    endgame(myscore, compscore);
+  }
+}
+
+function endgame(myscore, compscore) {
+  btn.forEach(el => el.disabled = true);
+  if (myscore > compscore)
+    headGreet.innerText = 'You Win!';
+  else
+    headGreet.innerText = 'Dr. Cooper Win\'s!';
 }
