@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    
+}
+
+#game__head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header > article {
+    display: flex;
+}
+
+header > article > h2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#game__body {
+    display: flex;
+    justify-content: space-around;
+}
+
+#game__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}

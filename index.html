@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Let's Play - THE BIG BANG WAY</title>
+</head>
+<body>
+    <header>
+        <h1 id="game__head">Let's Play</h1>
+        <article>
+            <h2>You</h2>
+            <h2>Dr. Sheldon Cooper</h2>
+        </article>
+    </header>
+    <section id="game__body">
+        <article id="game__card">
+            <h2>Score</h2>
+            <h2 id="myscore">0</h2>
+            <img src="/img/paper.png" id="myhand" alt="" width="220px">
+            
+        </article>
+        <article id="game__card">
+            <h2>Score</h2>
+            <h2 id="compscore">0</h2>
+            <img src="/img/rock.png" id="comphand" alt="" width="220px">
+        </article>
+        
+    </section>
+    <section>
+        <button onclick="play('rock')">
+            <img src="/img/rock.png" alt="" width="100px">
+        </button>
+        <button onclick="play('paper')">
+            <img src="/img/paper.png" alt="" width="100px">
+        </button>
+        <button onclick="play('scissors')">
+            <img src="/img/scissors.png" alt="" width="100px">
+        </button>
+        <button onclick="play('lizard')">
+            <img src="/img/lizard.png" alt="" width="100px">
+        </button>
+        <button onclick="play('spock')">
+            <img src="/img/spock.png" alt="" width="100px">
+        </button>
+        
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
