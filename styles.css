@@ -25,6 +25,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 #game__body {
@@ -51,4 +52,17 @@ main {
 
 .hand {
     width: 200px;
+}
+
+.game__buttons {
+    background-color:linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    min-height: 10vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.playbtn {
+    display: flex;
+    width: 120px;
 }
