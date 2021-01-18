@@ -4,51 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Let's Play - THE BIG BANG WAY</title>
 </head>
 
 <body>
-    
+
     <header>
         <h1 id="game__head">Let's Play</h1>
-        <article>
-            <h2>You</h2>
-            <h2>Dr. Sheldon Cooper</h2>
-        </article>
-    </header>
-    
-    <section id="game__body">
-        <article id="game__card">
-            <h2>Score</h2>
-            <h2 id="myscore">0</h2>
-            <img src="/img/rock.png" class="hand" id="myhand" alt="" width="220px">
+    </header> 
 
-        </article>
-        <article id="game__card">
-            <h2>Score</h2>
-            <h2 id="compscore">0</h2>
-            <img src="/img/rock.png" class="hand" id="comphand" alt="" width="220px">
-        </article>
-    </section>
+    <main>
+        <div id="game__body">
+            <article class="game__card">
+                <h2>You</h2>
+                <h3>Score</h3>
+                <h3 id="myscore">0</h3>
+                <img src="/img/rock.png" class="hand" id="myhand" alt="Player's hand">
+            </article>
+           
+            <article class="game__card">
+                <h2>Dr. Sheldon Cooper</h2>
+                <h2>Score</h2>
+                <h2 id="compscore">0</h2>
+                <img src="/img/rock.png" class="hand" id="comphand" alt="Computer's Hand">
+            </article>
+        </div>
 
-    <section id="button">
-        <button onclick="play('rock')">
-            <img src="/img/rock.png" alt="" width="100px">
-        </button>
-        <button onclick="play('paper')">
-            <img src="/img/paper.png" alt="" width="100px">
-        </button>
-        <button onclick="play('scissors')">
-            <img src="/img/scissors.png" alt="" width="100px">
-        </button>
-        <button onclick="play('lizard')">
-            <img src="/img/lizard.png" alt="" width="100px">
-        </button>
-        <button onclick="play('spock')">
-            <img src="/img/spock.png" alt="" width="100px">
-        </button>
-        </section>
+        <!-- <section class="game__buttons">
+            <button onclick="play('rock')">
+                <img src="/img/rock.png" alt=""  class="playbtn">
+            </button>
+            <button onclick="play('paper')">
+                <img src="/img/paper.png" alt=""  class="playbtn">
+            </button>
+            <button onclick="play('scissors')">
+                <img src="/img/scissors.png" alt="" class="playbtn">
+            </button>
+            <button onclick="play('lizard')">
+                <img src="/img/lizard.png" alt="" class="playbtn">
+            </button>
+            <button onclick="play('spock')">
+                <img src="/img/spock.png" alt="" class="playbtn">
+            </button>
+        </section> -->
+
+        <div class="game__result" style="display: none;">
+            HUMZA WINSA
+        </div>
+    </main>
 
     <script src="./index.js"></script>
 </body>

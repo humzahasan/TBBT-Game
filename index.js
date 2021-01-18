@@ -68,7 +68,7 @@ function gameStart(select) {
   document.getElementById('compscore').innerText = compscore;
   document.getElementById('myscore').innerText = myscore;
 
-  if (myscore == '5' || compscore == '5') {
+  if (myscore == '10' || compscore == '10') {
     endgame(myscore, compscore);
   }
 }
