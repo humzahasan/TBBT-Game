@@ -35,7 +35,7 @@ main {
 
 #game__body {
     min-height: 80vh;
-    width: 80%;
+
     background: white;
     display: flex;
     justify-content: space-between;
